@@ -1,0 +1,25 @@
+package day08;
+
+import java.util.Scanner;
+
+public class ArtikYilSorusu {
+
+	public static void main(String[] args) {
+		//Kullanýcýdan bir yýl girmesini isteyin, 
+		//yýl artýk yýl ise ekrana “Artýk yýl” degilse ekrana “Artýk yýl degil” yazdýrýn.
+		
+		Scanner scan= new Scanner (System.in);
+		System.out.println("Bir yil giriniz");
+		 int yil= scan.nextInt();
+		 
+		 
+		String result= (yil%100==0)  ? (( yil%400==0)  ?  "Artik yil" : "Artik yil degil") :
+			 (yil%4==0)  ?  "Artik yil"  : "Artik yil degil";
+		System.out.println(result);
+		
+		scan.close();
+		
+
+	}
+
+}
